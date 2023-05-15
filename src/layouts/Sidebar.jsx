@@ -17,31 +17,37 @@ const Sidebar = () => {
           to={"/dashboard/schedule"}
           className="border-b border-white text-orange"
         >
-          Schedule
+          Prescription List
         </NavLink>
         <NavLink
           to={"/dashboard/patient"}
           className="border-b border-white text-orange"
         >
-          Patient
+          Payment List
         </NavLink>
         <NavLink
           to={"/dashboard/appointment"}
           className="border-b border-white text-orange"
         >
-          Appointment
+          Appointment List
         </NavLink>
         <NavLink
           to={"/dashboard/prescription"}
           className="border-b border-white text-orange"
         >
-          Prescription
+          Employee List
+        </NavLink>
+        <NavLink
+          to={"/dashboard/prescription"}
+          className="border-b border-white text-orange"
+        >
+          Inventory List
         </NavLink>
         <NavLink
           to={"/dashboard/payment"}
           className="border-b border-white text-orange"
         >
-          Payment
+          Department List
         </NavLink>
       </div>
     </div>
