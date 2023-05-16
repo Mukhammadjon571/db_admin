@@ -9,6 +9,11 @@ import Prescription from "../pages/Prescription";
 import Appointment from "../pages/Appointment";
 import Payment from "../pages/Payment";
 import AppointmentForm from "../pages/Appointment/AppointmentForm";
+import Inventory from "../pages/Inventory";
+import InventoryForm from "../pages/Inventory/InventoryForm";
+import Doctors from "../pages/Doctors";
+import Nurses from "../pages/Nourse";
+import Departmen from "../pages/Department";
 
 const Router = () => {
   return (
@@ -22,6 +27,11 @@ const Router = () => {
         <Route path="appointment" element={<Appointment />} />
         <Route path="appointment/add" element={<AppointmentForm />} />
         <Route path="payment" element={<Payment />} />
+        <Route path="inventory" element={<Inventory />} />
+        <Route path="inventory/add" element={<InventoryForm />} />
+        <Route path="doctors" element={<Doctors />} />
+        <Route path="nurses" element={<Nurses />} />
+        <Route path="department" element={<Departmen />} />
       </Route>
     </Routes>
   );
