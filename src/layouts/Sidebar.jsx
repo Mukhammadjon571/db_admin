@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div className="h-screen p-8 pt-20 w-[320px] flex flex-col gap-4">
+    <div className="h-screen p-8 pt-20 w-[320px] flex flex-col gap-4 sticky top-0">
       <img src={userImage} className="mx-auto mb-6" alt="" />
       <div className="text-2xl flex flex-col gap-4">
         <NavLink
@@ -14,13 +14,13 @@ const Sidebar = () => {
           Dashboard
         </NavLink>
         <NavLink
-          to={"/dashboard/schedule"}
+          to={"/dashboard/prescription"}
           className="border-b border-white text-orange"
         >
           Prescription List
         </NavLink>
         <NavLink
-          to={"/dashboard/patient"}
+          to={"/dashboard/payment"}
           className="border-b border-white text-orange"
         >
           Payment List

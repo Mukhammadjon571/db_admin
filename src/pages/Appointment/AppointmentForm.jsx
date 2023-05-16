@@ -7,6 +7,8 @@ import Button from "../../components/ui/Button";
 const AppointmentForm = () => {
   // Inputni valuelarini boshqaradi, har bittasiga alohida yoziladi
   const [fullName, setFullName] = useInput("");
+  const [passport, setpassport] = useInput("");
+  const [select, setselect] = useInput("");
   //   redirect funcksiya
   const navigate = useNavigate();
 
@@ -42,30 +44,57 @@ const AppointmentForm = () => {
       {/* Buyogi inputlar */}
       {/* Hohlasez padding berasiz, p-[son] */}
       <div className="p-10">
-        <input
-          type="text"
-          value={fullName}
-          placeholder="Nimadur"
-          className="border-b p-2 m-2"
-          onChange={setFullName}
-          // majburiy qilsez boladi [required]
-          required
-        />
-        <input
-          type="text"
-          value={fullName}
-          placeholder="Nimadur"
-          className="border-b p-2 m-2"
-          onChange={setFullName}
-        />
-        <input
-          type="text"
-          value={fullName}
-          placeholder="Nimadur"
-          className="border-b p-2 m-2"
-          onChange={setFullName}
-        />
-        <Button>Kertti</Button>
+        <div className="flex items-center justify-center mt-3">
+          <div className="w-[300px]">Full name:</div>
+          <input
+            type="text"
+            value={fullName}
+            placeholder="Full name:"
+            className="border-b m-2 w-[500px] p-4 bg-[#f4f4f4]"
+            onChange={setFullName}
+            required
+          />
+        </div>
+        <div className="flex items-center justify-center mt-3">
+          <div className="w-[300px]">Passport ID:</div>
+          <input
+            type="text"
+            value={passport}
+            placeholder="Passport ID:"
+            className="border-b m-2 w-[500px] p-4 bg-[#f4f4f4]"
+            onChange={setpassport}
+            required
+          />
+        </div>
+        <div className="flex items-center justify-center mt-3">
+          <div className="w-[300px]">Choose Serial:</div>
+          <select
+            name=""
+            value={select}
+            onChange={setselect}
+            className="border-b m-2 w-[500px] p-4 bg-[#f4f4f4]"
+            placeholder="Select:"
+            id=""
+          >
+            <option>16:00</option>
+            <option>17:00</option>
+            <option>18:00</option>
+          </select>
+        </div>
+        <div className="flex justify-center gap-4 mt-6">
+          <button
+            type="reset"
+            className="bg-red-300 text-white rounded-md p-3 bg-[orange] px-6"
+          >
+            Reset
+          </button>
+          <button
+            type="submit"
+            className="bg-blue-500 text-white rounded-md p-3 px-6 bg-primary"
+          >
+            Submit
+          </button>
+        </div>
       </div>
     </form>
   );
